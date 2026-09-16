@@ -45,16 +45,6 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   revealObserver.observe(el);
 });
 
-// Galería: detectar fotos reales en assets/img/
-document.querySelectorAll('.work').forEach((work) => {
-  const match = work.style.getPropertyValue('--img').match(/url\(['"]?(.*?)['"]?\)/);
-  if (!match) return;
-  const img = new Image();
-  img.onload = () => work.classList.add('has-img');
-  img.onerror = () => work.style.removeProperty('--img');
-  img.src = match[1];
-});
-
 // Filtros de la galería
 const filters = document.querySelectorAll('.filter');
 filters.forEach((btn) => {
