@@ -62,7 +62,7 @@ filters.forEach((btn) => {
     const cat = btn.dataset.filter;
     filters.forEach((b) => {
       b.classList.toggle('is-active', b === btn);
-      b.setAttribute('aria-selected', String(b === btn));
+      b.setAttribute('aria-pressed', String(b === btn));
     });
     document.querySelectorAll('.work').forEach((work) => {
       work.classList.toggle('is-hidden', cat !== 'all' && work.dataset.cat !== cat);
@@ -73,7 +73,7 @@ filters.forEach((btn) => {
 // Instagram
 const insta = document.getElementById('instaLink');
 if (CONTACT.instagram) insta.href = CONTACT.instagram;
-else insta.hidden = true;
+else insta.remove();
 
 // Formulario: abre el correo con el mensaje preparado
 const form = document.getElementById('contactForm');
