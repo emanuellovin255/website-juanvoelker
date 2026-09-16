@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cóndor Dental Lab — Laboratorio dental digital, analógico y artístico</title>
+  <meta name="description" content="Cóndor Dental Lab: laboratorio dental multiservicios. Diseño CAD, impresión 3D, coronas, puentes, prótesis acrílicas, colados y estratificación cerámica.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-digital" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="24" rx="2"/><path d="M18 39h12M24 33v6"/><path d="M15 26c2-7 4-9 5-9s2 3 4 3 3-3 4-3 3 2 5 9"/></symbol>
+      <symbol id="i-analog" viewBox="0 0 48 48"><path d="M10 30c0-8 6-14 14-14s14 6 14 14"/><path d="M8 30h32v6c0 2-2 4-4 4H12c-2 0-4-2-4-4z"/><path d="M16 22v-4M24 20v-5M32 22v-4"/></symbol>
+      <symbol id="i-art" viewBox="0 0 48 48"><path d="M8 40l14-14"/><path d="M22 26l6-12 10-6-6 10-12 6"/><circle cx="12" cy="14" r="3"/><circle cx="36" cy="34" r="3"/></symbol>
+      <symbol id="i-cad" viewBox="0 0 48 48"><path d="M24 6l16 9v18l-16 9-16-9V15z"/><path d="M8 15l16 9 16-9M24 24v18"/></symbol>
+      <symbol id="i-print" viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="10"/><path d="M14 16v8h20v-8"/><path d="M18 24v12M24 24v16M30 24v10"/><path d="M8 42h32"/></symbol>
+      <symbol id="i-crown" viewBox="0 0 48 48"><path d="M12 18c0-6 5-9 10-7 1 .5 3 .5 4 0 5-2 10 1 10 7 0 9-3 13-4 20-1 5-2 7-4 7-3 0-3-8-4-11-1 3-1 11-4 11-2 0-3-2-4-7-1-7-4-11-4-20z"/></symbol>
+      <symbol id="i-denture" viewBox="0 0 48 48"><path d="M6 20c0 10 8 18 18 18s18-8 18-18"/><path d="M6 20c4-6 11-9 18-9s14 3 18 9"/><path d="M13 22v5M19 24v6M24 24v7M29 24v6M35 22v5"/></symbol>
+      <symbol id="i-metal" viewBox="0 0 48 48"><path d="M8 34c4-2 6-6 8-6s3 3 6 3 4-6 8-6 5 4 10 2"/><circle cx="16" cy="22" r="4"/><circle cx="30" cy="20" r="4"/><path d="M24 6v8"/></symbol>
+      <symbol id="i-wax" viewBox="0 0 48 48"><path d="M16 42V22c0-5 3-8 8-8s8 3 8 8v20z"/><path d="M24 14c-2-3-2-6 0-8 2 2 2 5 0 8"/></symbol>
+      <symbol id="i-ceramic" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 7v34M7 24h34M12 12l24 24M36 12L12 36"/></symbol>
+      <symbol id="i-articulator" viewBox="0 0 48 48"><path d="M10 10h22v8H10zM10 30h22v8H10z"/><path d="M32 14h6v20h-6"/><circle cx="38" cy="24" r="3"/></symbol>
+      <symbol id="i-scan" viewBox="0 0 48 48"><path d="M6 14V6h8M34 6h8v8M42 34v8h-8M14 42H6v-8"/><path d="M6 24h36"/></symbol>
+      <symbol id="i-check" viewBox="0 0 48 48"><path d="M10 25l9 9 19-20"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="9"/><circle cx="24" cy="24" r="7"/><circle cx="33" cy="15" r="1.2"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="Cóndor Dental Lab — inicio">
+        <img src="assets/logo.svg" alt="" width="44" height="42">
+        <span class="brand__text"><strong>CÓNDOR</strong><small>DENTAL LAB</small></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn btn--sm btn--dark">Enviar caso</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__grid"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Laboratorio dental multiservicios</p>
+          <h1 class="reveal">Precisión digital.<br><em>Oficio artesanal.</em></h1>
+          <p class="lead reveal">Diseñamos y fabricamos restauraciones y prótesis para clínicas y odontólogos que exigen exactitud técnica y una estética natural. Del escáner a la pieza terminada.</p>
+          <div class="hero__cta reveal">
+            <a href="#contacto" class="btn btn--dark">Solicitar trabajo</a>
+            <a href="#trabajos" class="btn btn--ghost">Ver trabajos</a>
+          </div>
+          <ul class="hero__tags reveal">
+            <li>Digital</li><li>Analógico</li><li>Artístico</li>
+          </ul>
+        </div>
+        <div class="hero__mark reveal">
+          <div class="hero__ring">
+            <img src="assets/logo.svg" alt="Cóndor Dental Lab">
+            <p class="hero__word">CÓNDOR</p>
+            <p class="hero__sub">DENTAL LAB</p>
+          </div>
+        </div>
+      </div>
+      <a href="#pilares" class="hero__scroll" aria-label="Desplazarse">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- PILARES -->
+    <section class="pillars" id="pilares">
+      <div class="container pillars__grid">
+        <article class="pillar reveal">
+          <svg class="ico"><use href="#i-digital"/></svg>
+          <span class="pillar__num">01</span>
+          <h3>Digital</h3>
+          <p>Flujo CAD/CAM completo: recepción de escaneos intraorales, diseño en software y fabricación por impresión 3D y fresado.</p>
+        </article>
+        <article class="pillar reveal">
+          <svg class="ico"><use href="#i-analog"/></svg>
+          <span class="pillar__num">02</span>
+          <h3>Analógico</h3>
+          <p>La técnica clásica que no falla: modelos en yeso, articulador, enfilado, enmuflado y colados con control manual en cada paso.</p>
+        </article>
+        <article class="pillar reveal">
+          <svg class="ico"><use href="#i-art"/></svg>
+          <span class="pillar__num">03</span>
+          <h3>Artístico</h3>
+          <p>Caracterización, maquillaje y estratificación cerámica para que cada pieza se integre en la sonrisa como un diente natural.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section section--dark" id="servicios">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--gold">Servicios</p>
+          <h2>Todo lo que tu caso necesita, <em>en un solo laboratorio.</em></h2>
+        </header>
+        <div class="services">
+          <article class="service reveal"><svg class="ico"><use href="#i-cad"/></svg><h3>Diseño CAD</h3><p>Diseño digital de coronas, puentes, carillas y encerados a partir de tus archivos STL.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-print"/></svg><h3>Impresión 3D</h3><p>Modelos de trabajo, guías, provisionales y patrones calcinables en resina de alta resolución.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-crown"/></svg><h3>Coronas y puentes</h3><p>Zirconio, disilicato de litio y metal-cerámica, con ajuste marginal preciso.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-denture"/></svg><h3>Prótesis acrílicas</h3><p>Prótesis totales y parciales removibles, enmufladas y terminadas a mano.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-metal"/></svg><h3>Estructuras metálicas</h3><p>Colados y estructuras para puentes y esqueléticos con acabado y pulido fino.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-wax"/></svg><h3>Encerados y mock-ups</h3><p>Encerados diagnósticos para planificar y presentar el tratamiento al paciente.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-ceramic"/></svg><h3>Estratificación cerámica</h3><p>Maquillaje y capas de cerámica para reproducir color, translucidez y textura.</p></article>
+          <article class="service reveal"><svg class="ico"><use href="#i-articulator"/></svg><h3>Montaje en articulador</h3><p>Registro y montaje de modelos para una oclusión funcional y estable.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proceso</p>
+          <h2>De tu clínica a la sonrisa del paciente, <em>en cuatro pasos.</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">01</span><svg class="ico"><use href="#i-scan"/></svg><h3>Recepción</h3><p>Nos envías el escaneo intraoral o las impresiones físicas con las indicaciones del caso.</p></li>
+          <li class="step reveal"><span class="step__n">02</span><svg class="ico"><use href="#i-cad"/></svg><h3>Diseño</h3><p>Planificamos y diseñamos la restauración, digital o encerada, y la revisamos contigo.</p></li>
+          <li class="step reveal"><span class="step__n">03</span><svg class="ico"><use href="#i-print"/></svg><h3>Fabricación</h3><p>Imprimimos, fresamos, colamos o procesamos según el material elegido.</p></li>
+          <li class="step reveal"><span class="step__n">04</span><svg class="ico"><use href="#i-check"/></svg><h3>Acabado y entrega</h3><p>Caracterizamos, pulimos y verificamos el ajuste antes de entregar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TRABAJOS -->
+    <section class="section section--ivory" id="trabajos">
+      <div class="container">
+        <header class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">Trabajos</p>
+            <h2>Nuestro <em>banco de trabajo.</em></h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar trabajos">
+            <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button class="filter" data-filter="digital" role="tab" aria-selected="false">Digital</button>
+            <button class="filter" data-filter="analogico" role="tab" aria-selected="false">Analógico</button>
+            <button class="filter" data-filter="artistico" role="tab" aria-selected="false">Artístico</button>
+          </div>
+        </header>
+
+        <!-- Para usar fotos reales: coloca los archivos en assets/img/ con estos nombres. -->
+        <div class="works">
+          <figure class="work work--tall reveal" data-cat="digital" style="--img:url('assets/img/diseno-cad.jpg')">
+            <svg class="work__ico"><use href="#i-cad"/></svg>
+            <figcaption><span>Digital</span>Diseño CAD de sector anterior</figcaption>
+          </figure>
+          <figure class="work reveal" data-cat="digital" style="--img:url('assets/img/impresion-3d.jpg')">
+            <svg class="work__ico"><use href="#i-print"/></svg>
+            <figcaption><span>Digital</span>Modelos en impresión 3D</figcaption>
+          </figure>
+          <figure class="work reveal" data-cat="analogico" style="--img:url('assets/img/protesis-acrilica.jpg')">
+            <svg class="work__ico"><use href="#i-denture"/></svg>
+            <figcaption><span>Analógico</span>Prótesis total enmuflada</figcaption>
+          </figure>
+          <figure class="work work--wide reveal" data-cat="artistico" style="--img:url('assets/img/ceramica.jpg')">
+            <svg class="work__ico"><use href="#i-ceramic"/></svg>
+            <figcaption><span>Artístico</span>Coronas cerámicas en cocción</figcaption>
+          </figure>
+          <figure class="work reveal" data-cat="analogico" style="--img:url('assets/img/articulador.jpg')">
+            <svg class="work__ico"><use href="#i-articulator"/></svg>
+            <figcaption><span>Analógico</span>Montaje en articulador</figcaption>
+          </figure>
+          <figure class="work work--tall reveal" data-cat="analogico" style="--img:url('assets/img/colado.jpg')">
+            <svg class="work__ico"><use href="#i-metal"/></svg>
+            <figcaption><span>Analógico</span>Estructura metálica colada</figcaption>
+          </figure>
+          <figure class="work reveal" data-cat="digital" style="--img:url('assets/img/fresado.jpg')">
+            <svg class="work__ico"><use href="#i-crown"/></svg>
+            <figcaption><span>Digital</span>Puente fresado sobre modelo</figcaption>
+          </figure>
+          <figure class="work reveal" data-cat="artistico" style="--img:url('assets/img/encerado.jpg')">
+            <svg class="work__ico"><use href="#i-wax"/></svg>
+            <figcaption><span>Artístico</span>Encerado diagnóstico</figcaption>
+          </figure>
+          <figure class="work work--wide reveal" data-cat="artistico" style="--img:url('assets/img/antes-despues.jpg')">
+            <svg class="work__ico"><use href="#i-art"/></svg>
+            <figcaption><span>Artístico</span>Rehabilitación estética — antes y después</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section section--dark about" id="nosotros">
+      <div class="container about__inner">
+        <div class="about__copy reveal">
+          <p class="eyebrow eyebrow--gold">Por qué Cóndor</p>
+          <h2>Mirada de cóndor: <em>ver cada detalle desde arriba.</em></h2>
+          <p>Somos un laboratorio que une la tecnología digital con la mano del técnico. Cada caso se revisa de principio a fin por la misma persona, con comunicación directa con el odontólogo.</p>
+        </div>
+        <ul class="values">
+          <li class="reveal"><strong>Precisión</strong><span>Ajustes marginales y oclusión controlados en cada etapa.</span></li>
+          <li class="reveal"><strong>Tecnología</strong><span>Escaneo, diseño CAD e impresión 3D de alta resolución.</span></li>
+          <li class="reveal"><strong>Oficio</strong><span>Técnicas analógicas dominadas para los casos que lo piden.</span></li>
+          <li class="reveal"><strong>Estética</strong><span>Color, forma y textura pensados para una sonrisa natural.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__copy reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Tienes un caso? <em>Hablemos.</em></h2>
+          <p>Cuéntanos qué necesitas: tipo de trabajo, material y plazo. Te respondemos con una propuesta.</p>
+          <a class="social" id="instaLink" href="#" target="_blank" rel="noopener">
+            <svg class="ico"><use href="#i-insta"/></svg>
+            <span>Síguenos en Instagram</span>
+          </a>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <label>Nombre<input name="nombre" type="text" required autocomplete="name"></label>
+            <label>Clínica<input name="clinica" type="text" autocomplete="organization"></label>
+          </div>
+          <label>Correo electrónico<input name="email" type="email" required autocomplete="email"></label>
+          <label>Tipo de trabajo
+            <select name="tipo">
+              <option>Diseño CAD</option>
+              <option>Impresión 3D</option>
+              <option>Coronas y puentes</option>
+              <option>Prótesis acrílicas</option>
+              <option>Estructuras metálicas</option>
+              <option>Encerado / mock-up</option>
+              <option>Estratificación cerámica</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn--dark btn--block">Enviar solicitud</button>
+          <p class="form__note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="footer__brand">
+        <span class="badge"><img src="assets/logo.svg" alt="" width="46" height="44"></span>
+        <span class="brand__text brand__text--light"><strong>CÓNDOR</strong><small>DENTAL LAB</small></span>
+      </a>
+      <p class="footer__tag">Digital · Analógico · Artístico</p>
+      <p class="footer__copy">© <span id="year"></span> Laboratorio Dental Cóndor</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
