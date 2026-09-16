@@ -137,7 +137,7 @@ main:focus { outline: none; }
   mask-image: radial-gradient(ellipse at 70% 50%, #000 10%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse at 70% 50%, #000 10%, transparent 70%);
 }
-.hero__inner { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; align-items: center; }
+.hero__inner { position: relative; display: grid; grid-template-columns: minmax(0, 760px); gap: 60px; align-items: center; }
 .hero h1 { font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 500; margin-bottom: 26px; }
 .lead { font-size: 1.08rem; color: var(--muted); max-width: 520px; margin-bottom: 36px; font-weight: 300; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
@@ -148,23 +148,6 @@ main:focus { outline: none; }
 }
 .hero__tags li:first-child { padding-left: 0; border-left: 0; }
 
-.hero__mark { display: flex; justify-content: center; }
-.hero__ring {
-  position: relative;
-  width: min(440px, 100%); aspect-ratio: 1;
-  border-radius: 50%; background: #fff;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  box-shadow: 0 40px 80px -30px rgba(11,11,12,.25), 0 0 0 1px var(--line);
-}
-.hero__ring::before, .hero__ring::after {
-  content: ""; position: absolute; border-radius: 50%; pointer-events: none;
-}
-.hero__ring::before { inset: -22px; border: 1px solid var(--gold); opacity: .45; }
-.hero__ring::after {
-  inset: -44px; border: 1px dashed rgba(184,151,90,.35);
-  animation: spin 60s linear infinite;
-}
-.hero__ring img { width: 66%; height: auto; margin-top: 2%; animation: float 6s ease-in-out infinite; }
 
 .hero__scroll {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
@@ -175,8 +158,6 @@ main:focus { outline: none; }
   background: var(--gold); border-radius: 2px; animation: scroll 1.8s ease-in-out infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes float { 50% { transform: translateY(-10px); } }
 @keyframes scroll { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
 
 /* PILLARS */
@@ -272,11 +253,6 @@ main:focus { outline: none; }
 
 /* ABOUT */
 .about { overflow: hidden; }
-.about::before {
-  content: ""; position: absolute; right: -120px; top: 50%; width: 520px; height: 520px; transform: translateY(-50%);
-  background: url("assets/brand/condor-simbolo.svg") center / contain no-repeat;
-  filter: invert(1); opacity: .04; pointer-events: none;
-}
 .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; }
 .about__copy h2 { margin-bottom: 24px; }
 .values { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink-3); border: 1px solid var(--ink-3); }
@@ -364,8 +340,6 @@ main:focus { outline: none; }
 
   .hero { padding-top: 110px; }
   .hero__inner { grid-template-columns: 1fr; gap: 70px; }
-  .hero__mark { order: -1; }
-  .hero__ring { width: min(260px, 70vw); }
   .hero__scroll { display: none; }
 
   .pillars__grid { grid-template-columns: 1fr; }
